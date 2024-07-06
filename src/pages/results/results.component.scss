@@ -1,18 +1,32 @@
 /* styles.css */
 .results-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  
-  .movie-card {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    max-width: 300px;
-  }
-  
-  .movie-card img {
-    max-width: 100%;
-    height: auto;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  height: 100%;
+
+}
+.empty {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.movie-card {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+}
+
+.movie-card img {
+  max-width: 100%;
+  height: auto;
+}

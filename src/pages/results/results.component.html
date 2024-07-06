@@ -1,13 +1,15 @@
-
-  
-
-  <div class="results-container">
-    <div *ngFor="let movie of movies" class="movie-card">
-      <div class="movie-card">
-        <img src="https://picsum.photos/200/300" alt="{{ movie.title }}" />
-        <h3>{{ movie.title }}</h3>
-        <!-- <p>{{ movie.overview }}</p> -->
-        <button (click)="showDetails(movie.id)">Details</button>
-      </div>
-    </div>
+<div class="results-container">
+@for (movie of movies?.results; track movie?.id) {
+  <app-movie-card
+    (click)="showDetails(movie.id)"
+    [title]="movie.title"
+    [description]="movie.overview"
+    [coverSrc]="movie.poster_path"
+  >
+  </app-movie-card>
+}@empty {
+  <div class="empty">
+    <nz-empty [nzNotFoundContent]="'pas de données'"></nz-empty>
   </div>
+}
+</div>

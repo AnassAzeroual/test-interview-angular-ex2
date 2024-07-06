@@ -1,1 +1,25 @@
-<p>details works!</p>
+<div class="container">
+    <div class="row">
+        <button nz-button nzType="primary" nzShape="circle" (click)="window.history.back()">
+            <span nz-icon nzType="arrow-left" nzTheme="outline"></span>
+        </button>
+    </div>
+    <div class="movie-details">
+        @if(movie.backdrop_path){
+        <img [ngSrc]="'original'+movie.backdrop_path" placeholder priority width="2840" height="800" [alt]="movie.title" />
+        }@else{
+        <img src="https://via.placeholder.com/342x513" alt="placeholder image" />
+        }
+
+        <h2>{{ movie.title }}
+            @if (isFavorit) {
+            <span class="heart" nz-icon [nzType]="'heart'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#eb2f96'"></span>
+            }@else {
+            <span class="heart" nz-icon [nzType]="'heart'" [nzTheme]="'outline'" (click)="favorit()"></span>
+            }
+        </h2>
+        <p>{{ movie.overview }}</p>
+        <p>Release Date: {{ movie.release_date }}</p>
+        <p>Rating: {{movie.vote_average}} <nz-rate [ngModel]="movie.vote_average" nzAllowHalf> </nz-rate> </p>
+    </div>
+</div>

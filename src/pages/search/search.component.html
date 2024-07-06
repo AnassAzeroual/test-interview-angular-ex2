@@ -1,5 +1,28 @@
-
 <div>
-    <ng-omni-search [language]="'en-US'" [formControl]="searchInput"></ng-omni-search>
-    <app-results [movies]="movies"></app-results>
+  <div class="filter">
+    <ng-omni-search
+      [language]="'en-US'"
+      [formControl]="searchInput"
+    ></ng-omni-search>
+    <nz-select
+      [(ngModel)]="multipleValue"
+      (ngModelChange)="search()"
+      [nzSize]="'default'"
+      nzMode="multiple"
+      nzPlaceHolder="Veuillez sélectionner le genre"
+    >
+      <nz-option
+        *ngFor="let option of listOfOption"
+        [nzLabel]="option.name"
+        [nzValue]="option.id"
+      ></nz-option>
+    </nz-select>
+  </div>
+  <app-results [movies]="movies"></app-results>
+  <nz-pagination
+    [nzPageSize]="20"
+    class="pagination"
+    [nzTotal]="movies?.total_results"
+    (nzPageIndexChange)="navigation($event)"
+  ></nz-pagination>
 </div>

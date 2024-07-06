@@ -1,0 +1,50 @@
+.container {
+
+.row{
+text-align: end;
+margin-bottom: 15px;
+  button {}
+}
+
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    .heart{
+      font-size: 34px !important;
+    }
+    img {
+      max-width: 100vh;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 8px;
+        font-size: 18px;
+        color: #eb2f96;
+        cursor: pointer;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .nz-rate {
+      font-size: 18px;
+      color: #fadb14;
+    }
+  }
+}

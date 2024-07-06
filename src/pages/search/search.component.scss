@@ -1,0 +1,44 @@
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+
+  .filter {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
+
+    nz-select {
+      border: 1px solid #ac10a2;
+      padding: 12px;
+      border-radius: 22px;
+      ::ng-deep .ant-select-selector {
+        border: none !important;
+      }
+
+    }
+
+    ng-omni-search {
+      input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      margin: 0 20px 15px 0;
+    }
+  }
+
+  .pagination {
+    margin: 10px;
+  }
+
+  .ant-select {
+    width: 300px;
+  }
+}
