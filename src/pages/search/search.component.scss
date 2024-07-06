@@ -6,6 +6,27 @@ div {
   border-radius: 8px;
 
   .filter {
+    z-index: 10;
+    position: sticky;
+    top: 0;
+    animation: slideDown 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    background: white;
+    padding: 10px 20px 0px 20px;
+    margin-bottom: 12px;
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
+    }
+
     display: flex;
     flex-direction: row;
     align-items: baseline;
@@ -15,6 +36,7 @@ div {
       border: 1px solid #ac10a2;
       padding: 12px;
       border-radius: 22px;
+
       ::ng-deep .ant-select-selector {
         border: none !important;
       }
