@@ -1,0 +1,15 @@
+.container {
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  ::ng-deep .ant-card-cover img {
+    border-radius: 2px 2px 0 0;
+    width: 300px;
+    height: auto;
+}
+}
