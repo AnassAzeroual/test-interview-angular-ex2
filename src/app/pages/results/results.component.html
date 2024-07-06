@@ -1,0 +1,13 @@
+
+  
+
+  <div class="results-container">
+    <div *ngFor="let movie of movies" class="movie-card">
+      <div class="movie-card">
+        <img src="https://picsum.photos/200/300" alt="{{ movie.title }}" />
+        <h3>{{ movie.title }}</h3>
+        <!-- <p>{{ movie.overview }}</p> -->
+        <button (click)="showDetails(movie.id)">Details</button>
+      </div>
+    </div>
+  </div>

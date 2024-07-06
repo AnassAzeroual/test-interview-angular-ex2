@@ -1,0 +1,18 @@
+/* styles.css */
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .movie-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    max-width: 300px;
+  }
+  
+  .movie-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
